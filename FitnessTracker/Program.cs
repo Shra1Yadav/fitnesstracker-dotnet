@@ -21,6 +21,7 @@ namespace FitnessTracker
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://0.0.0.0:5000"); // Allow external access
                 });
     }
 }

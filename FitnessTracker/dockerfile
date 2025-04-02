@@ -17,7 +17,7 @@ RUN dotnet publish 'FitnessTracker/FitnessTracker.csproj' -c Release -o /app/pub
 # Stage 3
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-ENV ASPNETCORE_HTTP_PORTS=4001
-EXPOSE 4001
+ENV ASPNETCORE_HTTP_PORTS=5000
+EXPOSE 5000
 COPY --from=publish /app/publish .
 ENTRYPOINT [ "dotnet", "FitnessTracker.dll" ]
